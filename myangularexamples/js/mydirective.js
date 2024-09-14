@@ -8,7 +8,7 @@ module.directive('mydirective', function(){
 	
 });
 
-module.directive('mymenu', function(){
+module.directive('mycitymenu', function(){
 
 	var mydropdown = "<select ng-model='city'>";
 	mydropdown += "<option>Patna</option>";	
