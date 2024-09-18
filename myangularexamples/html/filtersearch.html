@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="mymodule">
+
+<head>
+
+    <title>This ia my first angular filter search page.</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/myfiltersort.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-controller="mycontroller">
+
+        Search the list: <input type="text" name="" ng-model="searchVal">
+
+        <hr>
+
+        <li ng-repeat="color in colors | filter: searchVal">
+            {{color}}
+        </li>
+
+    </div>
+
+</body>
+
+</html>
