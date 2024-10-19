@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mymodule">
+
+<head>
+    <title>This ia my first angular ng-controller arithmetic page.</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/myarithmetic_dynamic.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="mycontroller">
+
+       <input type="text" ng-model="a" name="">
+       <input type="text" ng-model="b" name=""><br><br>
+       <button ng-click="click()">Calculate</button><br><br>
+
+       {{"sum = " + sum}} <br>
+       {{"sub = " + sub}} <br>
+       {{"mul = " + mul}} <br>
+       {{"div = " + div}}
+
+   </div>
+
+</body>
+
+</html>
