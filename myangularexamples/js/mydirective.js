@@ -1,6 +1,6 @@
 var module = angular.module('mymodule', [])
 
-module.directive('mydirective', function(){
+module.directive('mylanguage', function(){
 
 	var eng = "English";
 
@@ -11,9 +11,11 @@ module.directive('mydirective', function(){
 module.directive('mycitymenu', function(){
 
 	var mydropdown = "<select ng-model='city'>";
+
 	mydropdown += "<option>Patna</option>";	
 	mydropdown += "<option>Delhi</option>";	
 	mydropdown += "<option>Mumbai</option>";
+	mydropdown += "<option>Bangalore</option>";
 
 	return {template : mydropdown}	
 	
