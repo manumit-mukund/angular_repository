@@ -2,24 +2,13 @@ var module = angular.module('mymodule', [])
 
 module.controller('mycontroller', function ($scope) {
 
-	$scope.a = 4;
-	$scope.b = 2;
-
-	$scope.sum = $scope.a + $scope.b;
-	$scope.sub = $scope.a - $scope.b;
-	$scope.mul = $scope.a * $scope.b;
-	$scope.div = $scope.a / $scope.b;
-
-
 	$scope.click = function () {
 
-		$scope.sum = $scope.a*1 + $scope.b*1;
-		$scope.sub = $scope.a - $scope.b;
-		$scope.mul = $scope.a * $scope.b;
-		$scope.div = $scope.a / $scope.b;
+		$scope.sum = $scope.t1*1 + $scope.t2*1;
+		$scope.sub = $scope.t1 - $scope.t2;
+		$scope.mul = $scope.t1 * $scope.t2;
+		$scope.div = $scope.t1 / $scope.t2;
 
-	};
-
-	
+	};	
 	
 });
