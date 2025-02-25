@@ -4,7 +4,7 @@ module.controller('mycontroller', function($scope, $timeout){
 
 	$timeout(function() {
 
-		$scope.text = "A timeout function";
+		$scope.time = new Date().toLocaleTimeString();
 
 	}, 3000);
 	
