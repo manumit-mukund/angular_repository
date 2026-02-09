@@ -1,0 +1,25 @@
+    <!DOCTYPE html>
+
+    <html lang="en" ng-app="mymodule">
+
+    <head>
+
+        <title>This ia my first angular filter page.</title>
+        <script src="../js/angular.min.js"></script>
+        <script src="../js/myfilter.js"></script>
+
+    </head>
+
+    <body>
+
+        <div> 
+
+            <input type="text" ng-model="money" name=""><br/><br/>
+
+            Money: {{(money | currency : "INR " : 2)}}
+
+        </div>
+
+    </body>
+
+    </html>
