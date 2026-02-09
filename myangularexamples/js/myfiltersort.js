@@ -1,7 +1,7 @@
-var module = angular.module('mymodule', [])
+	var module = angular.module('mymodule', [])
 
-module.controller('mycontroller', function ($scope) {
+	module.controller('mycontroller', function ($scope) {
 
-	$scope.colors = ['red', 'green', 'blue', 'black'];
+		$scope.colors = ['red', 'green', 'blue', 'black', 'yellow'];
 
-});
+	});
