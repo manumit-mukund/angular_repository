@@ -1,0 +1,25 @@
+        <!DOCTYPE html>
+        <html lang="en" ng-app="mymodule">
+
+        <head>
+            <title>This ia my first angular filter sort page.</title>
+            <script src="../js/angular.min.js"></script>
+            <script src="../js/myfiltersort.js"></script>
+        </head>
+
+        <body>
+
+            <div ng-controller="mycontroller">
+
+                <ul>
+                    <li ng-repeat="color in colors | orderBy : '-': color">
+                        {{color}}
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </body>
+
+        </html>
