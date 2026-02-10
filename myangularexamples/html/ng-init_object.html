@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <title>This ia my first angular ng-init page.</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body>
+
+      <h1>Sample Application</h1>
+      
+      <div ng-init = "quantity = 1;cost = 10; 
+         student = {firstname:'Manu',lastname:'Kumar',rollno:3};
+         marks = [70,60,72,73,63]">
+         <p>Hello {{student.firstname + " " + student.lastname}}!</p>
+         <p>Expense on Books : {{cost * quantity}} Rs</p>
+         <p>Roll No: {{student.rollno}}</p>
+         <p>Marks(Math): {{marks[3]}}</p>
+      </div>
+
+</body>
+
+</html>
