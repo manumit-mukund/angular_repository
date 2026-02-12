@@ -1,0 +1,11 @@
+/* Styles in this file are encapsulated and only apply to elements within this component's template */
+h1 {
+
+    color: blue;
+
+}
+
+.highlight {
+    font-weight: bold;
+    background-color: yellow;
+}
