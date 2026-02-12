@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {
-  /* . . . */
-  NgFor,
-  /* . . . */
-} from '@angular/common';
+import { NgFor} from '@angular/common';
 
 export interface Item {
 
