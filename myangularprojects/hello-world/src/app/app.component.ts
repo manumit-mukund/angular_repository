@@ -25,7 +25,7 @@ export interface Item {
 
 export class AppComponent {
 
-  title = 'hello-world';
+  title = 'My Title';
 
   items: Item[] = [
 
