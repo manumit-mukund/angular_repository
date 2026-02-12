@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hello-world-app": {
+    "hello-world": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hello-world-app",
+            "outputPath": "dist/hello-world",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hello-world-app:build:production"
+              "buildTarget": "hello-world:build:production"
             },
             "development": {
-              "buildTarget": "hello-world-app:build:development"
+              "buildTarget": "hello-world:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "hello-world-app:build"
+            "buildTarget": "hello-world:build"
           }
         },
         "test": {
@@ -98,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "5357ad0b-4a00-41a2-9327-2a1934df02c4"
+    "analytics": "15432c4a-bf8a-428b-8c2c-2d30ef3c8a55"
   }
 }
