@@ -1,15 +1,35 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
+export class AppComponent {
+  myForm: FormGroup;
+  responseMessage: string = '';
 
-export class App {
+  constructor(private fb: FormBuilder, private dataService: DataService) {
+    this.myForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
 
-  protected readonly title = signal('form_to_java');
-  
+  onSubmit(): void {
+    if (this.myForm.valid) {
+      this.dataService.sendDataToServlet(this.myForm.value).subscribe(
+        response => {
+          console.log('Servlet response:', response);
+          this.responseMessage = 'Data sent successfully!';
+        },
+        error => {
+          console.error('Error sending data:', error);
+          this.responseMessage = 'Error sending data. Check console for details.';
+        }
+      );
+    }
+  }
 }
