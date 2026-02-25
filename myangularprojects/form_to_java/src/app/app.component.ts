@@ -1,34 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DataService } from './data.service';
+import { MyService } from './my.service'; // Create this service in the next step
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   myForm: FormGroup;
-  responseMessage: string = '';
 
-  constructor(private fb: FormBuilder, private dataService: DataService) {
+  constructor(private fb: FormBuilder, private myService: MyService) { }
+
+  ngOnInit(): void {
     this.myForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
   }
 
   onSubmit(): void {
     if (this.myForm.valid) {
-      this.dataService.sendDataToServlet(this.myForm.value).subscribe(
-        response => {
-          console.log('Servlet response:', response);
-          this.responseMessage = 'Data sent successfully!';
-        },
-        error => {
-          console.error('Error sending data:', error);
-          this.responseMessage = 'Error sending data. Check console for details.';
-        }
+      this.myService.sendDataToServlet(this.myForm.value).subscribe(
+        response => console.log('Servlet response:', response),
+        error => console.error('Error:', error)
       );
     }
   }
