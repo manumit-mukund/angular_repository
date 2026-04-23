@@ -38,16 +38,25 @@
 
                 </div>
             </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('Welcome to Angular!')">Show Welcome</button>
+                <span (click)="showAlert('You clicked the span!')">Click me!</span>
+                <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+            </div>
         </div>
 
-        <div class="col-4">
-            <button class="btn btn-success" (click)="showAlert('Welcome to Angular!')">Show Welcome</button>
-            <span (click)="showAlert('You clicked the span!')">Click me!</span>
-            <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+        <div class="col-6">
+            <input type="text" [(ngModel)]="courseName" placeholder="Enter course name"> Change Course
+            <input type="checkbox" [(ngModel)]="isInidan" /> Is Indian
+            <select [(ngModel)]="stateNane">
+                <option value="">Select </option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Rajasthan">Rajasthan</option>
+            </select>
         </div>
 
-        <div class="col-4">
-
-
+        <div class="col-6">
+            <h2>{{firstName()}}</h2>
         </div>
     </div>>
