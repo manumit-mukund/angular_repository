@@ -33,6 +33,7 @@ export class DatabindingComponent {
    changeCourseName() {
 
       this.courseName = "Angular 18 with TypeScript";
+      this.firstName.set("Manu Signal Updated");
    }
 
 }

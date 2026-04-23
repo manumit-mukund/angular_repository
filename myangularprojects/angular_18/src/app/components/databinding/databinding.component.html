@@ -8,11 +8,9 @@
 
     <div class="col-4">
 
-
     </div>
 
     <div class="col-4">
-
 
     </div>
 </div>>
@@ -26,15 +24,15 @@
                 <h4>{{courseName}}</h4>
                 <div>{{inputType}}</div>
                 <input type="text" value="{{courseName}}" placeholder="Enter text" />
-                <input type="{{inputType}}" />
+                <label>Input :<input type="{{inputType}}" /></label>
             </div>>
             <div class="col-4">
                 Property Binding
                 <!-- <div class="{{myClassName}}" >Danger</div> -->
-                <div [class]="myClassName"> Danger Class/div>
-                    <input type="text" [value]="courseName" />
+                <div [class]="myClassName"> Danger Class
+                    <label>Enter Course Name1 : <input type="text" [value]="courseName" /></label>
 
-                    <input [type]="inputType" />
+                    <label>Enter Course Name2 : <input [type]="inputType" /></label>
 
                 </div>
             </div>
@@ -47,8 +45,8 @@
 
         <div class="col-6">
             <input type="text" [(ngModel)]="courseName" placeholder="Enter course name"> Change Course
-            <input type="checkbox" [(ngModel)]="isInidan" /> Is Indian
-            <select [(ngModel)]="stateNane">
+            <label>Enter Course Name : <input type="checkbox" [(ngModel)]="isInidan" /> Is Indian</label>
+            <select aria-label="Choose a country" [(ngModel)]="stateNane">
                 <option value="">Select </option>
                 <option value="Maharashtra">Maharashtra</option>
                 <option value="Gujarat">Gujarat</option>
