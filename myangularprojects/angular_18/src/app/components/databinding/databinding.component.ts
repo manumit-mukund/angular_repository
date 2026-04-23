@@ -9,4 +9,22 @@ import { Component } from '@angular/core';
 })
 export class DatabindingComponent {
 
+  courseName: string = "Angular 18";
+
+  inputType = "checkbox";
+
+  myClassName: string = "bg-primary";
+
+  rollNo: number = 101;
+
+  isInidan: boolean = true;
+
+  courseDate: Date = new Date();
+
+  constructor() {
+
+    
+
+   }
+
 }
