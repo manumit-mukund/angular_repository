@@ -21,10 +21,19 @@ export class DatabindingComponent {
 
   courseDate: Date = new Date();
 
-  constructor() {
+  constructor() {    
 
-    
+   }
 
+   showAlert(message: string) {
+
+      alert (message);
+
+   }
+
+   changeCourseName() {
+
+      this.courseName = "Angular 18 with TypeScript";
    }
 
 }

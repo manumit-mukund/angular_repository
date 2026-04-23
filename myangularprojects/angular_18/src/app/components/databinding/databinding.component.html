@@ -32,15 +32,18 @@
                 Property Binding
                 <!-- <div class="{{myClassName}}" >Danger</div> -->
                 <div [class]="myClassName"> Danger Class/div>
-                    <input type="text" [value] = "courseName" />
+                    <input type="text" [value]="courseName" />
+
+                    <input [type]="inputType" />
 
                 </div>
             </div>
         </div>
 
         <div class="col-4">
-
-
+            <button class="btn btn-success" (click)="showAlert('Welcome to Angular!')">Show Welcome</button>
+            <span (click)="showAlert('You clicked the span!')">Click me!</span>
+            <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
         </div>
 
         <div class="col-4">
