@@ -1,0 +1,53 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+
+    <h1>Structural Directives</h1>
+    <p>*ngIf directive, *ngFor directive</p>
+
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="bg-danger p-3 text-center">
+            <h4>Div1</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+
+        <div class="bg-success p-3 text-center">
+            <h4>Div2</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="bg-secondary p-3 text-center">
+            <h4>Div3</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+          <div class="bg-secondary p-3 text-center">
+            <h4>Div4</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <button class="btn btn-danger">Hide</button>
+        <button class="btn btn-primary mx-2">Show</button>
+    </div>
+
+    <div class="col-3" text-center>
+        <button class="btn btn-success">Toggle</button>
+    </div>
+
+    <div class="col-3">
+        <div style="display: flex; align-items: center">
+        </div>
+
+    </div>
+
+    <div class="col-3">
+    </div>
+</div>
