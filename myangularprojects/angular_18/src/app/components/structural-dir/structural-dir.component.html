@@ -6,6 +6,7 @@
 </div>
 
 <div class="row pt-3">
+
     <div class="col-3">
         <div *ngIf="isDiv1Visible" class="bg-danger p-3 text-center">
             <h4>Div1</h4>
@@ -13,7 +14,6 @@
     </div>
 
     <div class="col-3">
-
         <div *ngIf="isDiv2Visible" class="bg-success p-3 text-center">
             <h4>Div2</h4>
         </div>
@@ -26,30 +26,42 @@
     </div>
 
     <div class="col-3">
-        <div class="bg-secondary p-3 text-center">
+        <div *ngIf="isActive" class="bg-primary p-4 text-center">
+            <!-- <div *ngIf="selectedState == 'USA'" class="bg-secondary p-3 text-center"> -->
             <h4>Div4</h4>
         </div>
-    </div>
-</div>
 
-<div class="row pt-3">
-    <div class="col-3">
-        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
-        <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
     </div>
 
-    <div class="col-3" text-center>
-        <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
-    </div>
 
-    <div class="col-3">
-        <div style="display: flex; align-items: center">
-            <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
-            <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="widh-50">
+    <div class="row pt-3">
+
+        <div class="col-3">
+            <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+            <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
+        </div>
+
+        <div class="col-3" text-center>
+            <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+        </div>
+
+        <div class="col-3">
+            <div style="display: flex; align-items: center">
+                <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
+                <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="widh-50">
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div style="display: flex; align-items: center">
+                <input type="checkbox" [(ngModel)]="isActive" class="width-50">
+                <select>
+                    <option value="">Select State</option>
+                    <option value="1">India</option>
+                    <option value="2">USA</option>
+                    <option value="3">Sri Lanka</option>
+                </select>
+            </div>
         </div>
 
     </div>
-
-    <div class="col-3">
-    </div>
-</div>

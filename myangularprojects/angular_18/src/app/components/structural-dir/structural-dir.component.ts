@@ -17,6 +17,9 @@ export class StructuralDirComponent {
   num1: string = '';
   num2: string = '';
 
+  isActive: boolean = false;
+  selectedState: string = '';
+
   showDiv1() {
 
     this.isDiv1Visible = true;
