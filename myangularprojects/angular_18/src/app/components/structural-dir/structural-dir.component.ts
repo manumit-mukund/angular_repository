@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-structural-dir',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './structural-dir.component.html',
   styleUrl: './structural-dir.component.css'
 })
@@ -12,6 +13,9 @@ export class StructuralDirComponent {
 
   isDiv1Visible: boolean = true;
   isDiv2Visible: boolean = false;
+
+  num1: string = '';
+  num2: string = '';
 
   showDiv1() {
 

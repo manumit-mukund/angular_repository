@@ -20,13 +20,13 @@
     </div>
 
     <div class="col-3">
-        <div class="bg-secondary p-3 text-center">
+        <div *ngIf="num1 == num2" class="bg-secondary p-3 text-center">
             <h4>Div3</h4>
         </div>
     </div>
 
     <div class="col-3">
-          <div class="bg-secondary p-3 text-center">
+        <div class="bg-secondary p-3 text-center">
             <h4>Div4</h4>
         </div>
     </div>
@@ -44,6 +44,8 @@
 
     <div class="col-3">
         <div style="display: flex; align-items: center">
+            <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
+            <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="widh-50">
         </div>
 
     </div>
