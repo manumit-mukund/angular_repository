@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 export class StructuralDirComponent {
 
   isDiv1Visible: boolean = true;
+  isDiv2Visible: boolean = false;
 
   showDiv1() {
 
@@ -21,6 +22,22 @@ export class StructuralDirComponent {
   hideDiv1() {
 
     this.isDiv1Visible = false;
+
+  }
+
+  toggleDiv2() {
+
+    this.isDiv2Visible = !this.isDiv2Visible;
+
+    // if (this.isDiv2Visible == true) {
+
+    //   this.isDiv2Visible = false;
+
+    // } else {
+
+    //   this.isDiv2Visible = true;
+
+    // }
 
   }
 

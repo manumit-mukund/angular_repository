@@ -14,7 +14,7 @@
 
     <div class="col-3">
 
-        <div class="bg-success p-3 text-center">
+        <div *ngIf="isDiv2Visible" class="bg-success p-3 text-center">
             <h4>Div2</h4>
         </div>
     </div>
@@ -34,12 +34,12 @@
 
 <div class="row pt-3">
     <div class="col-3">
-        <button class="btn btn-danger">Hide</button>
-        <button class="btn btn-primary mx-2">Show</button>
+        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
     </div>
 
     <div class="col-3" text-center>
-        <button class="btn btn-success">Toggle</button>
+        <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
     </div>
 
     <div class="col-3">
